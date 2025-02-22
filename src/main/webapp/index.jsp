@@ -1,10 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ page import="java.util.Calendar" %>
 <html>
-<head>
-    <title>Welcome</title>
-</head>
 <body>
-    <h1>Welcome to COMP367</h1>
+    <h1>
+        <% 
+            int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+            String greeting = (hour < 12) ? "Good morning" : "Good afternoon";
+            out.println(greeting + ", Parth Savjani! Welcome to COMP367");
+        %>
+    </h1>
 </body>
 </html>
